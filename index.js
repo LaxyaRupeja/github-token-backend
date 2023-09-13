@@ -24,20 +24,6 @@ app.get("/getToken", async (req, res) => {
     })
 })
 
-
-// Your GitHub access token
-const accessToken = "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";
-
-// Owner and repository name
-const owner = "LaxyaRupeja";
-const repo = "backend";
-
-// Function to create or update a file
-async function createOrUpdateFile(fileName, fileContent, brandName, access_token) {
-
-}
-
-
 app.post("/push", async (req, res) => {
     const { accessToken, brandName, fileContent, fileName, owner, repo, commitMessage } = req.body;
     const octokit = new Octokit({
